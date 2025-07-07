@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8b3a3a;
+            color: #333;
+        }
+        header {
+            background-color: #504b2c3f;
+            color: rgb(105, 107, 233);
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f3f3f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: rgb(19, 18, 18);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: rgb(224, 218, 218);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 25px;
+        }
+        .rows {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+            grid-auto-rows: auto;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .rows div {
+            background-color: #d1cfcf;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: rgb(240, 235, 235);
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Company</h1>
+    </header>
+
+    <nav>
+        <a href="#About">About Us</a>
+        <a href="#Insights">Insights</a>
+        <a href="#Technology">Technology Platforms</a>
+    </nav>
+
+    <section id="About">
+        <h2>About Us</h2>
+        <p>We are a leading technology company providing innovative solutions to businesses worldwide. 
+        Our mission is to empower organizations through technology, delivering excellence and value 
+        in every project we undertake.</p>
+    </section>
+
+    <section id="Insights">
+        <h2>Insights</h2>
+        <p>Stay up-to-date with the latest trends, research, and industry news. Our team of experts 
+        shares valuable insights to help your business navigate the ever-changing technology landscape.</p>
+    </section>
+
+    <section id="Technology">
+        <h2>Technology Platforms</h2>
+        <div class="rows">
+            <div>Cloud Computing</div>
+            <div>Artificial Intelligence & Machine Learning</div>
+            <div>Internet of Things</div>
+            <div>Blockchain Platforms</div>
+            <div>Mobile Platforms</div>
+            <div>Web Development Platforms</div>
+            <div>Big Data Platforms</div>
+            <div>Cybersecurity Platforms</div>
+            <div>DevOps Tools</div>
+            <div>AR/VR Platforms</div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Our Company. All rights reserved.
+    </footer>
+
+</body>
+</html>

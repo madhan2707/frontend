@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    table {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    td {
+      padding: 10px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    input[type="reset"] {
+      background-color: #6c757d;
+    }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      opacity: 0.9;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var unname = document.login.username.value.trim();
+      var pwd = document.login.pwd.value.trim();
+      var emailId = document.login.email.value.trim();
+
+      var st = "";
+      if (unname === "") st += "• Username\n";
+      if (pwd === "") st += "• Password\n";
+      if (emailId === "") st += "• Email ID\n";
+
+      if (st === "") {
+        return true;
+      } else {
+        alert("Please fill in the following fields:\n" + st);
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form action="./test.jsp" method="post" name="login" onsubmit="return validateForm()">
+    <table>
+      <tbody>
+        <tr>
+          <td>Username:</td>
+          <td><input type="text" name="username" placeholder="Enter username..." /></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="pwd" placeholder="Enter password..." /></td>
+        </tr>
+        <tr>
+          <td>Email ID:</td>
+          <td><input type="email" name="email" placeholder="Enter email..." /></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Login" /></td>
+          <td><input type="reset" value="Reset" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>

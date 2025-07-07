@@ -1,0 +1,126 @@
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("C:/Users/MADHAN/Desktop/html/travel2.jpg"); 
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #nav {
+            line-height: 30px;
+            background-color: rgba(90, 126, 158, 0.85);
+            height: 100vh; 
+            width: 250px;
+            float: right;
+            padding: 20px;
+            box-sizing: border-box;
+            color: white;
+            overflow-y: auto;
+        }
+        #section {
+            margin-left: 270px; /* Leave space for nav */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        #footer {
+            background-color: black;
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+        input[type=text], input[type=email], input[type=tel], select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type=submit], input[type=reset] {
+            background-color: #2ba8eb;
+            color: white;
+            padding: 8px 15px;
+            margin: 8px 5px 0 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type=submit]:hover, input[type=reset]:hover {
+            background-color: #ec0808;
+        }
+        label {
+            font-weight: bold;
+        }
+        h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>City Gallery</h1>
+    </div>
+
+    <div id="nav">
+        <h3>Travel Request Form</h3>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone No:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <select id="location" name="location" required>
+                <option value="">Select</option>
+                <option value="male">London</option>
+                <option value="female">Tokyo</option>
+                <option value="other">Paris</option>
+            </select>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="section">
+        <h2>London</h2>
+        <p>London is my best favourite country. It is the best place to visit.</p>
+        <p>London is the capital city of England. A city in the United Kingdom, it's a beautiful city.</p>
+    
+      <h2>Paris</h2>
+      <p>Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture...</p>
+    
+      <h2>Tokyo</h2>
+      <p>Tokyo, Japans busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples...</p>
+    </div>
+
+
+    <div id="footer">
+        Copyright © W3Schools.com
+    </div>
+</body>
+</html>

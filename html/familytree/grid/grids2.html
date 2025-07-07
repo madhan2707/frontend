@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MRU Grid Layout</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      background-color: rgb(76, 99, 123);
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .container > div {
+      background-color: #ebe0cc;
+      border: 2px solid black;
+      padding: 20px;
+      font-size: 24px;
+      text-align: center;
+      transition: 0.3s;
+      border-radius: 8px;
+    }
+
+    .container > div:hover {
+      background-color: #d1c3aa;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px;
+      text-align: center;
+      width: 100%;
+      font-size: 36px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MRU Departments Grid</h1>
+
+  <div class="container">
+    <div>
+        MRU - AIML
+    </div>
+    <div>
+        MRU - DS
+    </div>
+    <div>
+        MRU - IT
+    </div>
+    <div>
+        MRU - CSE
+    </div>
+    <div>
+        MRU - BLOCK CHAIN
+    </div>
+    <div>
+        MRU - VR
+    </div>
+  </div>
+
+</body>
+</html>

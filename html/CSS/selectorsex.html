@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors Example</title>
+  <style>
+   
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+   
+    h1 {
+      color: darkblue;
+    }
+
+    /* Class Selector */
+    .highlight {
+      background-color: yellow;
+    }
+
+    /* ID Selector */
+    #unique {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* Grouping Selector */
+    h2, p {
+      margin-bottom: 10px;
+    }
+
+    /* Descendant Selector */
+    div p {
+      color: green;
+    }
+
+    /* Child Selector */
+    ul > li {
+      color: purple;
+    }
+
+    /* Adjacent Sibling Selector */
+    h3 + p {
+      color: orange;
+    }
+
+    /* General Sibling Selector */
+    h4 ~ p {
+      font-style: italic;
+    }
+
+    /* Attribute Selector */
+    input[type="text"] {
+      border: 2px solid #333;
+    }
+
+    /* Pseudo-class */
+    a:hover {
+      color: blue;
+    }
+
+    /* Pseudo-class :first-child */
+    li:first-child {
+      font-weight: bold;
+    }
+
+    /* Pseudo-elements */
+    a::before {
+      content: "🔗 ";
+    }
+
+    a::after {
+      content: " 🔗";
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Type Selector Example</h1>
+
+  <h2 class="highlight">Class Selector Example</h2>
+
+  <p id="unique">ID Selector Example</p>
+
+  <div>
+    <p>Descendant Selector Example (div p)</p>
+  </div>
+
+  <ul>
+    <li>First Child (Bold)</li>
+    <li>Child Selector Example (ul > li)</li>
+  </ul>
+
+  <h3>Heading 3</h3>
+  <p>Adjacent Sibling of h3</p>
+
+  <h4>Heading 4</h4>
+  <p>General Sibling of h4</p>
+  <p>Another general sibling</p>
+
+  <input type="text" placeholder="Attribute Selector (text box)">
+
+  <br><br>
+
+  <a href="https://www.w3schools.com/cssref/sel_hover.php">Hover and Pseudo-elements Example</a>
+
+</body>
+</html>

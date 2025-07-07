@@ -1,0 +1,115 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Fonts */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #ff914d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+  background: url('https://i.imgur.com/YP44VXy.jpg') center/cover no-repeat;
+  color: rgb(21, 20, 20);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+
+/* Snack List */
+.snack-list {
+  padding: 40px 20px;
+  background-color: #fff0e6;
+  text-align: center;
+}
+
+.snack-list h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+ .nav-links a:hover {
+    color: #667eea;
+  }
+  .snack-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+  .snack-card:hover .snackcard-img {
+    height: 120px;
+  }
+.snack-card {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  width: 250px; /* slightly increased */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  vertical-align: top;
+}
+.snack-card:hover {
+  transform: scale(1.05);
+}
+
+.snack-card img {
+  width: 100%;
+  height: auto; /* Let the image grow naturally */
+  max-height: 200px; /* Optional: limit max height */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.snack-card h3 {
+  margin: 10px 0 5px;
+}
+
+/* About & Contact */
+#about, #contact {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #ff914d;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}

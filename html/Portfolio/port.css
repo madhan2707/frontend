@@ -1,0 +1,243 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f6fc;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Hero Header */
+header.hero {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+header.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+header.hero p {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #2575fc;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+  background: #2575fc;
+  color: white;
+}
+
+/* Section Style */
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #222;
+  border-left: 5px solid #6a11cb;
+  padding-left: 10px;
+}
+
+/* About Section */
+.about p {
+  font-size: 1.1rem;
+}
+
+/* Skills Section */
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills li {
+  background-color: #e0e7ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.skills li:hover {
+  background-color: #c7d2fe;
+}
+
+/* Projects */
+.project {
+  background-color: #f9fafe;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #2575fc;
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project h3 {
+  color: #2575fc;
+  margin-bottom: 8px;
+}
+
+.project p {
+  color: #555;
+}
+
+
+.contact a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  border-top: 4px solid #2575fc;
+}
+
+
+@media (max-width: 768px) {
+  header.hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 25px 20px;
+  }
+
+  .skills ul {
+    flex-direction: column;
+  }
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+}
+
+.header-text {
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-text {
+    text-align: center;
+  }
+}
+.skills {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 1.5em;
+}
+
+.skill span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+
+/* Star container */
+.stars-outer {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  color: #ccc;
+  line-height: 1;
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #f5c518;
+  width: 0;
+}
+
+.stars-outer::before {
+  content: "★★★★★";
+}
+
+.stars-inner::before {
+  content: "★★★★★";
+}

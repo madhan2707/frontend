@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase  Modern E-Commerce UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .product-card {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .cart-badge {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="flex justify-between items-center p-4 shadow-md">
+    <div class="text-2xl font-bold">ShopEase</div>
+    <div class="flex gap-4 items-center">
+      <input type="text" placeholder="Search products..." class="border px-2 py-1 rounded" />
+      <button class="relative">
+        🛒
+        <span class="absolute top-0 right-0 text-xs bg-red-600 text-white rounded-full px-1 cart-badge">2</span>
+      </button>
+      <button class="bg-blue-600 text-white px-3 py-1 rounded">Login</button>
+    </div>
+  </header>
+
+  <!-- Filters and Products -->
+  <section class="p-4 grid grid-cols-1 md:grid-cols-4 gap-4">
+    <!-- Sidebar Filters -->
+    <aside class="hidden md:block border p-4 rounded">
+      <h2 class="font-bold mb-2">Filters</h2>
+      <div>
+        <label class="block mb-1">Category</label>
+        <select class="w-full border p-1 rounded">
+          <option>All</option>
+          <option>Clothing</option>
+          <option>Electronics</option>
+        </select>
+      </div>
+      <div class="mt-4">
+        <label class="block mb-1">Price Range (₹300 - ₹4500)</label>
+        <input type="range" min="300" max="4500" value="300" class="w-full" />
+        <div class="flex justify-between text-sm text-gray-600 mt-1">
+          <span>₹300</span>
+          <span>₹4500</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="col-span-3">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-semibold">Popular Products</h2>
+        <select class="border px-2 py-1 rounded">
+          <option>Newest</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- 10 Product Cards -->
+        <div class="border p-2 rounded product-card">
+          <img src="C:\Users\Admin\Downloads\download 5.jpeg" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">Wireless Headphones</h3>
+          <p class="text-sm text-gray-600">High quality sound</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹1,999</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="C:\Users\Admin\Downloads\download 3.jpeg" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">Casual T-Shirt</h3>
+          <p class="text-sm text-gray-600">100% cotton</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹499</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="C:\Users\Admin\Downloads\download 4.jpeg" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">Smart Watch</h3>
+          <p class="text-sm text-gray-600">Fitness & call tracker</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹4,499</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="https://tinyurl.com/yc33btb8" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">Bluetooth Speaker</h3>
+          <p class="text-sm text-gray-600">Portable and loud</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹1,499</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="https://tinyurl.com/5b9r434f" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">Fitness Tracker Band</h3>
+          <p class="text-sm text-gray-600">Heart rate monitor</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹899</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="https://tinyurl.com/mk49m5ta" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">Formal Shirt</h3>
+          <p class="text-sm text-gray-600">Slim fit design</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹799</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="https://tinyurl.com/37vdaxvu" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">LED Table Lamp</h3>
+          <p class="text-sm text-gray-600">Adjustable lighting</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹650</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="https://tinyurl.com/yc86uz5y" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">USB Charging Hub</h3>
+          <p class="text-sm text-gray-600">5-in-1 solution</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹349</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="https://tinyurl.com/3pp94d43" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">Laptop Stand</h3>
+          <p class="text-sm text-gray-600">Ergonomic & foldable</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹1,099</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="border p-2 rounded product-card">
+          <img src="https://tinyurl.com/3vv5t7f7" alt="Product" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-2 font-bold">Gaming Mouse</h3>
+          <p class="text-sm text-gray-600">RGB, 6 buttons</p>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-green-600 font-bold">₹1,299</span>
+            <button class="text-sm bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="mt-6 flex justify-center gap-2">
+        <button class="px-3 py-1 border rounded">1</button>
+        <button class="px-3 py-1 border rounded bg-gray-200">2</button>
+        <button class="px-3 py-1 border rounded">3</button>
+      </div>
+    </main>
+  </section>
+
+  <!-- Footer -->
+  <footer class="p-4 mt-10 bg-gray-100 text-center text-sm">
+    © 2025 ShopEase. All rights reserved.
+  </footer>
+</body>
+</html>

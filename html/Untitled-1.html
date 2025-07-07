@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="lightblue">
+    <br>
+    <center>
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name = "fName"</td>
+            </tr>
+            <br></br>
+            <br></br>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name = "lName"</td>
+            </tr>
+            <br></br>
+            <br></br>
+            <tr>
+                <td>Date of birth</td>
+                <td><input type="text" name = "DOB"</td>
+            </tr>
+            <br></br>
+             <tr>
+                <td>Gender</td>
+                <td><input type="radio" name = "Gender"/>Male
+                    <br>
+                    <input type="radio" name = "Gender"/>Female
+                </td>
+            </tr>
+            <tr>
+                <td>Roll no:  </td>
+                <td><input type="text" name="roll_no" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+             <tr>
+            <td>Phone Number:</td>
+            <td><input type="tel" name="phone_number" required></td>
+        </tr>
+        <tr>
+                <td>Select Your Age: <span id="ageValue">18</span></td>
+                <td>
+                    <input type="range" name="age" id="age" min="10" max="60" value="18" 
+                    oninput="ageValue.innerText = this.value">
+                </td>
+            </tr>
+
+        <tr>
+            <td>Address:</td>
+            <td><textarea name="address" rows="4" cols="30" required></textarea></td>
+        </tr>
+
+        <tr>
+            <td>Course:</td>
+            <td><input type="radio" name="course" id:"AIML" value="AIML">AIML<br>
+            <input type="radio" name="course" id:"DSA" value="DSA">DSA<br>
+            <input type="radio" name="course" id:"DBMS" value="DBMS">DBMS<br>
+            </td>
+        </tr>
+        <td>Course:</td>
+            <td>
+                <select name="course" required>
+                <option value="" disabled selected>Select your course</option>
+                <optgroup label="Computer Science">
+                    <option value="AIML">AIML</option>
+                    <option value="DSA">DSA</option>
+                    <option value="DBMS">DBMS</option>
+                </optgroup>
+                <optgroup label="Engineering Core">
+                        <option value="EEE">EEE</option>
+                        <option value="MECH">MECH</option>
+                    </optgroup>
+                </select>
+            </td>
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+                <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </td>
+            </tr>
+    </form>
+        </table>
+    </center>
+</body>
+</html>
+

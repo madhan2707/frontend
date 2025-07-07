@@ -1,0 +1,15 @@
+    	PROGRAMMIMG STYLES:
+they are classified into 2 Styles
+1.Imperative programming Style
+2.Decelerative programming 
+
+Imperative programming:
+
+it consist of sequence of statements the changes the programming states until the target result is archived.
+	the main focus is on how to achive the goal.
+Decelerative programming :
+	In which we define what needed to be accomplished without defining how it has to be implemented.
+---it consist of 3 types
+----a.logical
+----b.functional
+----c.database processing approach

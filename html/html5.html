@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 New Semantics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url("travel2.jpg"); /* Place this image in same folder */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        nav {
+            line-height: 30px;
+            background-color: rgb(237, 209, 235);
+            height: 300px;
+            width: 200px;
+            float: right;
+            padding: 10px;
+        }
+
+        section {
+            width: 350px;
+            float: left;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .form-section {
+            clear: both;
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            max-width: 400px;
+        }
+
+        input[type=text], input[type=email], input[type=tel], select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type=submit], input[type=reset] {
+            background-color: #2ba8eb;
+            color: white;
+            padding: 8px 15px;
+            margin: 8px 5px 0 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type=submit]:hover, input[type=reset]:hover {
+            background-color: #ec0808;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        video {
+            display: block;
+            margin: 30px auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    City Gallery
+</header>
+<section>
+    <h2>London</h2>
+    <p>London is the capital city of England. Its diverse population, world-class museums, bustling markets, and lively theatre scene in the West End make it one of the most dynamic cities.</p>
+</section>
+<section>
+    <h2>Paris</h2>
+    <p>Paris, the capital of France, is one of the most iconic cities in the world, known for its timeless beauty, rich history, and vibrant culture. It’s famous for landmarks like the Eiffel Tower and the Louvre.</p>
+</section>
+<section>
+    <h2>Tokyo</h2>
+    <p>Tokyo, the capital of Japan, blends ultramodern innovation with centuries-old tradition. It's known for skyscrapers, temples, and neighborhoods like Shibuya and Shinjuku.</p>
+</section>
+<div class="form-section">
+    <h3>Travel Request Form</h3>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone No:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="location">Location:</label>
+        <select id="location" name="location" required>
+            <option value="">Select</option>
+            <option value="london">London</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="paris">Paris</option>
+        </select>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<video width="320" height="240" controls>
+    <source src="tourvideo.mp4" type="video/mp4"> 
+    Your browser does not support the video tag.
+</video>
+<footer>
+    &copy; 2025 City Gallery. All rights reserved.
+</footer>
+</body>
+</html>
