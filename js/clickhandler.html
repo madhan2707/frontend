@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p>Click the button to perform an event</p>
+    <button id="id1">Click Me!</button>
+    <div Image src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:100px;height:100px;">
+        <p>Hover over this image to change its background color</p></div>
+<script>
+        var button=document.getElementById("id1");
+        function handleClick(){
+            alert("button Clicked");
+        }
+        button.addEventListener("click",handleClick);
+        function handleMouseover(){
+            button.style.backgroundColor="lightcoral";
+        }
+        button.addEventListener("mouseover",handleMouseover);
+        function handleMouseover(){
+            button.style.backgroundColor="lightblue"
+        } 
+        button.addEventListener("mouseout",handleMouseout)
+    
+    </script>
+</body>
+</html>

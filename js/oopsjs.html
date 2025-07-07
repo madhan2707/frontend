@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript OOPS</title>
+  <script>
+    function addPrice(amount) {
+      this.price = amount;
+    }
+    function Book(title, author) {
+      this.title = title;
+      this.author = author;
+      this.addPrice = addPrice;
+    }
+  </script>
+</head>
+<body>
+  <h1>JavaScript OOP Example</h1>
+  <script>
+    var myBook = new Book("Perl", "Mohatashim");
+    myBook.addPrice(100);
+    console.log("Title: " + myBook.title);
+    console.log("Author: " + myBook.author);
+    console.log("Price: " + myBook.price);
+    document.write("<p><strong>Title:</strong> " + myBook.title + "</p>");
+    document.write("<p><strong>Author:</strong> " + myBook.author + "</p>");
+    document.write("<p><strong>Price:</strong> " + myBook.price + "</p>");
+  </script>
+</body>
+</html>

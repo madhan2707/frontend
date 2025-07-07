@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript - Date Object Examples</title>
+</head>
+<body>
+
+<h2>Example 1: Date after 1st January 1970 (999999999999)</h2>
+<p id="example1"></p>
+
+<h2>Example 2: Custom Date (2001, 5, 14, 6, 43, 58, 342)</h2>
+<p id="example2"></p>
+
+<h2>Example 3: Dates before and after 1st January 1970</h2>
+<p id="example3"></p>
+
+<h2>Example 4: Custom Date (August 19, 2024)</h2>
+<p id="example4"></p>
+
+<h2>Example 5: Today's Date</h2>
+<p id="example5"></p>
+
+<script>
+const date1 = new Date(999999999999);
+document.getElementById("example1").innerHTML =
+  "toDateString(): " + date1.toDateString() + "<br>" +
+  "toISOString(): " + date1.toISOString() + "<br>" +
+  "toUTCString(): " + date1.toUTCString();
+
+const date2 = new Date(2001, 5, 14, 6, 43, 58, 342);
+document.getElementById("example2").innerHTML =
+  "The custom date is: " + date2;
+
+const output3 = document.getElementById("example3");
+let date3a = new Date(999999999999);
+output3.innerHTML = "Date after 1st Jan 1970: " + date3a + "<br>";
+let date3b = new Date(-999999999999);
+output3.innerHTML += "Date before 1st Jan 1970: " + date3b;
+
+const date4 = new Date("August 19, 2024 09:30:54");
+document.getElementById("example4").innerHTML =
+  "The custom date is: " + date4;
+
+const date5 = new Date();
+document.getElementById("example5").innerHTML =
+  "Today's date is: " + date5;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Enter Example</title>
+  <script>
+    function changeFontSize() {
+      document.getElementById("box").style.fontSize = "24px";
+    }
+    function changeColor() {
+      document.getElementById("box").style.color = "blue";
+    }
+  </script>
+</head>
+<body>
+  <div onmouseenter="this.style.color='green'">
+    Welcome To CSS - Malla Reddy University
+  </div>
+  <div id="box"
+       onmouseenter="changeFontSize(); changeColor();">
+    Hello, World!<br>
+    AI/ML 3RD Year Students, You Guys Are Rocking
+  </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Employee Form</title>
+  <script>
+    function muFunction(event) {
+      event.preventDefault(); // 🚫 prevent form from submitting/reloading
+
+      var empNumber = document.muEmpForm.empName.value;
+      var confirmation = confirm("Do you want to submit the form?");
+
+      if (confirmation) {
+        document.getElementById('id1').innerHTML =
+          "<font color='red'>Employee Name is: </font>" +
+          empNumber +
+          "<font color='blue'> Employee Name</font>";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Employee Form</h1>
+  <form name="muEmpForm" onsubmit="muFunction(event)">
+    <table>
+      <tr>
+        <td>Employee ID:</td>
+        <td><input type="text" name="empId" required placeholder="Employee ID" /></td>
+      </tr>
+      <tr>
+        <td>Employee Name:</td>
+        <td><input type="text" name="empName" required placeholder="Employee Name" /></td>
+      </tr>
+      <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td>
+          <select id="gender" name="gender" required>
+            <option value="">--Select--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Employee Email:</td>
+        <td><input type="email" name="empEmail" required placeholder="Employee Email" /></td>
+      </tr>
+      <tr>
+        <td>Employee Phone:</td>
+        <td><input type="tel" name="empPhone" required placeholder="Employee Phone" /></td>
+      </tr>
+      <tr>
+        <td>Employee Address:</td>
+        <td><input type="text" name="empAddress" required placeholder="Employee Address" /></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Submit" /></td>
+        <td><input type="reset" value="Reset" /></td>
+      </tr>
+    </table>
+  </form>
+  <div id="id1"></div>
+</body>
+</html>

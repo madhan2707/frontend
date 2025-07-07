@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AnimationEvent Example</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      animation: moveBox 4s ease-in-out 4;
+    }
+
+    @keyframes moveBox {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(300px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Watch the box move and track events</h2>
+  <div class="box" id="animatedBox"></div>
+
+  <script>
+    const box = document.getElementById("animatedBox");
+
+    box.addEventListener("animationstart", function(event) {
+      console.log("Animation started:", event.animationName);
+      box.style.backgroundColor = "orange";
+    });
+
+    box.addEventListener("animationiteration", function(event) {
+      console.log("Animation iteration:", event.animationName);
+      box.style.backgroundColor = "blue";
+    });
+  </script>
+
+</body>
+</html>

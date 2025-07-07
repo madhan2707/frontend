@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date of Birth</title>
+</head>
+<body>
+
+<h2>Check Your Birthday Info</h2>
+
+<label for="dob">Enter your Date of Birth:</label>
+<input type="date" id="dob">
+<button onclick="showBirthdayInfo()">Check</button>
+
+<p id="output"></p>
+
+<script>
+function getDayOfBirthday(dob) {
+  const date = new Date(dob);
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  return days[date.getDay()];
+}
+
+function getMonthOfBirthday(dob) {
+  const date = new Date(dob);
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  return months[date.getMonth()];
+}
+
+function getDaysLived(dob) {
+  const birthDate = new Date(dob);
+  const today = new Date();
+  const diffInTime = today - birthDate; 
+  const diffInDays = Math.floor(diffInTime / (1000 * 60 * 60 * 24));
+  return diffInDays;
+}
+
+function showBirthdayInfo() {
+  const dobInput = document.getElementById("dob").value;
+  
+  if (!dobInput) {
+    document.getElementById("output").innerHTML = "Please enter a date.";
+    return;
+  }
+
+  const day = getDayOfBirthday(dobInput);
+  const month = getMonthOfBirthday(dobInput);
+  const daysLived = getDaysLived(dobInput);
+
+  document.getElementById("output").innerHTML =
+    "Your birthday falls on: <b>" + day + "</b><br>" +
+    "Your birthday month is: <b>" + month + "</b><br>" +
+    "You have lived approximately: <b>" + daysLived + " days</b>";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        class Trainee{
+        constructor(firstName, lastName, password, course, courseCost) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.password = password;
+            this.course = course;
+            this.courseCost = courseCost;
+        }
+        getName(){
+            return this.firstName + " " + this.lastName;
+        }
+        updatePassword(newPassword) {
+            this.password = newPassword;
+        }
+        getcourseCost() {
+            return this.courseCost;
+        }
+        getTraineeDetails() {
+            return '<strong>name:</strong> ${this.getName()}<br>'
+                  '<strong>Course selected:</strong> ${this.courses.join(',')}<br>'
+                  '<strong>Coursecost:</strong> ${this.courseCost}<br>'
+                  '<strong>Password:</strong> ${this.password}';
+        }
+        const course={
+            "Java": 2000,
+            "Python": 2500,
+            "Web Development": 3000,
+            "Data Science": 3500
+        };
+        lettraineeObj = null;
+        document.getElementById('traineeForm').onsubmit = function(e) {
+            e.preventDefault();
+            const firstName = document.getElementById('fname').value;
+            const lastName = document.getElementById('lname').value;
+            const password = document.getElementById('password').value;
+            const checkedCourses = Array.from(document.querySelectorAll('input[name="course"]:checked')).map(cb => cb.value);
+            let totalCost = checkedCourses.reduce((sum, c) => sum + course[c], 0);
+            traineeObj = new Trainee(firstName, lastName, password, checkedCourses, totalCost);
+            document.getElementById('output').innerHTML = traineeObj.getTraineeDetails() + '<br><button onclick='updatePwdPrompt()'>Update Password</button>';
+        };
+        function updatePwdPrompt(){
+            const newPwd = prompt("Enter new password:");
+            if (newPwd && traineeObj) {
+                traineeObj.updatePassword(newPwd);
+                document.getElementById('output').innerHTML = traineeObj.getTraineeDetails() + '<br><button onclick="updatePwdPrompt()">Update Password</button>';
+            }                            
+        }   
+    }     
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <body>
+  <form id="traineeForm">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" required><br><br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+
+    <fieldset>
+      <legend>Select Courses:</legend>
+      <label><input type="checkbox" name="course" value="Java"> Java</label><br>
+      <label><input type="checkbox" name="course" value="Python"> Python</label><br>
+      <label><input type="checkbox" name="course" value="Web Development"> Web Development</label><br>
+      <label><input type="checkbox" name="course" value="Data Science"> Data Science</label><br>
+    </fieldset><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <hr>
+  <div id="output"></div>
+</body>
+
+</body>
+</html>
